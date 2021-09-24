@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sneakerFragment">
+
+    <fragment
+        android:id="@+id/sneakerFragment"
+        android:name="com.example.sneakeractivity.SneakerFragment"
+        android:label="fragment_sneaker"
+        tools:layout="@layout/fragment_sneaker" >
+        <action
+            android:id="@+id/action_sneakerFragment_to_sneakerDetailsFragment"
+            app:destination="@id/sneakerDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sneakerDetailsFragment"
+        android:name="com.example.sneakeractivity.SneakerDetailsFragment"
+        android:label="fragment_sneaker_details"
+        tools:layout="@layout/fragment_sneaker_details" >
+        <action
+            android:id="@+id/action_sneakerDetailsFragment_to_checkOutFragment"
+            app:destination="@id/checkOutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.example.sneakeractivity.CheckOutFragment"
+        android:label="fragment_check_out"
+        tools:layout="@layout/fragment_check_out" />
+</navigation>
